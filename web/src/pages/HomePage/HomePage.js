@@ -5,7 +5,7 @@ import { useState } from 'react'
 const HomePage = () => {
   const [name, setName] = useState('Defaut')
 
-  // Random a name
+  // Swap name on h1
   const onClick = () => {
     if (name === 'Defaut') {
       setName('Blabla')
@@ -16,8 +16,7 @@ const HomePage = () => {
 
   return (
     <>
-      <MetaTags title="Home" description="Home page" />
-
+      <MetaTags title="cccccHome" description="Home page" />
       <h1>Test Home with {name} </h1>
       <p>
         Find me at <code>./web/src/pages/HomePage/HomePage.js</code>
@@ -27,6 +26,8 @@ const HomePage = () => {
         <Link to={routes.home()}>Home</Link>`
       </p>
       <button onClick={onClick}>Click on me</button>
+      <p>Click here to go Portfolio</p>
+      <Link to={routes.portfolio()}>portfolio</Link>
     </>
   )
 }
